@@ -16,7 +16,7 @@ def generate_numbers():
     old_format = random.randint(0, len(letters) ** 3 - 1)  # 1728 символов для трехбуквенного номера
     new_format = random.randint(0, 9999)  # максимальноe кол-во символов для четырех цифр
 
-    if old_format < 0.5:
+    if random.random() < 0.5:
         return f"Старый формат: {letters[old_format // len(letters) ** 2]}{letters[(old_format // len(letters)) % len(letters)]}{letters[old_format % len(letters)]}-{new_format:04}"
     else:
         return f"Новый формат: {new_format:04}-{random.choice(letters)}{random.choice(letters)}{random.choice(letters)}"
