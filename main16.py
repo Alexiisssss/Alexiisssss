@@ -1,40 +1,35 @@
-# Задача 3. Беспилотный автомобиль
-# Условие. Это творческая задача.
-# Представьте, что вы проектируете беспилотный автомобиль.
-# Вам необходимо продумать, какими свойствами он обладает и какие действия совершает.
-# Создайте класс беспилотный автомобиль и сохраните его в виде программного модуля.
-# Импортируете класс и инициализируйте новый объект.
+# Dictionary for converting Roman numerals to decimal numbers
+numbers = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5,
+           'IV': 4, 'I': 1}
 
 
-# Решение
-class AutonomousCar:
-    def __init__(self, model, speed=0, position=(0, 0)):
-        self.model = model
-        self.speed = speed
-        self.position = position
+# Recursive function for converting Roman numerals to decimal numbers
+def roman_to_int(roman):
+    # Base case: if the string is empty, return 0
+    if len(roman) == 0:
+        return 0
+    # If there's only one character left in the string, return its value
+    elif len(roman) == 1:
+        return numbers.get(roman[0], 'Ошибка: неверная римская цифра')
+    else:
+        # If the current character is less than the next one, subtract the current from the next
+        if numbers.get(roman[0], 0) < numbers.get(roman[1], 0):
+            if roman[0] + roman[1] in numbers:
+                return numbers[roman[0] + roman[1]] + roman_to_int(roman[2:])
+            else:
+                return 'Ошибка: недопустимая комбинация римских цифр'
+        # Otherwise, simply add the value of the current character
+        else:
+            return numbers[roman[0]] + roman_to_int(roman[1:])
 
-    def move(self, direction):
-        if direction == 'вперед':
-            self.position = (self.position[0] + self.speed, self.position[1])
-        elif direction == 'назад':
-            self.position = (self.position[0] - self.speed, self.position[1])
-        elif direction == 'влево':
-            self.position = (self.position[0], self.position[1] - self.speed)
-        elif direction == 'вправо':
-            self.position = (self.position[0], self.position[1] + self.speed)
 
-    def brake(self):
-        self.speed = 0
+# Main program function
+def main():
+    roman_numeral = input('Введите число римскими цифрами: ')
+    result = roman_to_int(roman_numeral.upper())
+    print(f"Десятичное число: {result}")
 
 
-# Пример использования
+# Running the main function
 if __name__ == "__main__":
-    car = AutonomousCar("Tesla Model S")
-    print(f"Модель: {car.model}, Скорость: {car.speed}, Положение: {car.position}")
-
-    car.speed = 50
-    car.move('вперед')
-    print(f"Модель: {car.model}, Скорость: {car.speed}, Положение: {car.position}")
-
-    car.brake()
-    print(f"Модель: {car.model}, Скорость: {car.speed}, Положение: {car.position}")
+    main()

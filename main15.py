@@ -11,15 +11,14 @@
 
 # Решение
 def hex2int(hex_value):
-    hex_digits = '0123456789ABCDEF'
     try:
         decimal_value = int(hex_value, 16)
         if 0 <= decimal_value <= 15:
             return decimal_value
         else:
-            raise ValueError('Введенное значение должно быть от 0 до F')
+            return 'Значение должно быть от 0 до F'
     except ValueError:
-        raise ValueError('Некорректное значение шестнадцатеричной цифры')
+        return 'Некорректное значение шестнадцатеричной цифры'
 
 
 def int2hex(decimal_value):
@@ -27,12 +26,13 @@ def int2hex(decimal_value):
         hex_value = hex(decimal_value)[2:].upper()
         return hex_value
     else:
-        raise ValueError('Введенное значение должно быть от 0 до 15')
+        return "Ошибка! Введенное значение должно быть от 0 до 15"
 
 
 # Пример использования
-hex_digit = 'A'
-decimal_digit = 10
+if __name__ == "__main__":
+    hex_digit = 'B'
+    decimal_digit = 15
 
-print(f"Шестнадцатеричное '{hex_digit}' -> Десятичное {hex2int(hex_digit)}")
-print(f"Десятичное {decimal_digit} -> Шестнадцатеричное '{int2hex(decimal_digit)}'")
+    print(f"Шестнадцатеричное '{hex_digit}' -> Десятичное {hex2int(hex_digit)}")
+    print(f"Десятичное {decimal_digit} -> Шестнадцатеричное '{int2hex(decimal_digit)}'")
