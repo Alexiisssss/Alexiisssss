@@ -15,6 +15,8 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<span style="color: blue;">Blue text</span>
+
 <span style="color: blue;"**Hello! 👋**</span>
 
 My name is Alexey Volkov, and this is my GitHub profile. Here you will find my projects, experiments, and research on various topics. I am passionate about programming, web development, artificial intelligence, and everything related to technology.  
