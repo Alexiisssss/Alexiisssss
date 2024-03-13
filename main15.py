@@ -16,7 +16,11 @@ def hex2int(hex_value):
         if 0 <= decimal_value <= 15:
             return decimal_value
         else:
+<<<<<<< HEAD
             return 'Значение должно быть от 0 до F'
+=======
+            raise ValueError('Значение должно быть от 0 до F')
+>>>>>>> cfc3a5239b3781ff614326bbe59050aa67ed1181
     except ValueError:
         return 'Некорректное значение шестнадцатеричной цифры'
 
