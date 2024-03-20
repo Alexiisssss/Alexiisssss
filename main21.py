@@ -1,14 +1,9 @@
-# Работа с API News API
-#
-# Получить и вывести список последних 10-ти новостей,
-# выпущенных информационным агентством BBC;
-
-# pip install newsapi-python
-
-from newsapi import NewsApiClient
+#pip install newsapi-python
+#Перейдите на сайт News API: https://newsapi.org/
+#Нажмите на кнопку "Get API Key" в верхнем правом углу страницы.
 
 # Инициализация клиента News API с вашим ключом API
-newsapi = NewsApiClient(api_key='13ccfb80ac5d4749a8f0d4afdc9fd6e0')
+newsapi = NewsApiClient(api_key='YOUR_API_KEY')
 
 # Получение списка последних 10 новостей от BBC
 bbc_news = newsapi.get_top_headlines(sources='bbc-news', language='en', page_size=10)
