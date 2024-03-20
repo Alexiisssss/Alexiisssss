@@ -9,7 +9,7 @@
 from newsapi import NewsApiClient
 
 # Инициализация клиента News API с вашим ключом API
-newsapi = NewsApiClient(api_key='13ccfb80ac5d4749a8f0d4afdc9fd6e0')
+newsapi = NewsApiClient(api_key='YOUR_API_KEY')
 
 # Получение списка последних новостей, связанных с искусственным интеллектом
 ai_news = newsapi.get_everything(q='искусственный интеллект', language='ru', page_size=5)
