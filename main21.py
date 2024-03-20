@@ -1,3 +1,6 @@
+# Работа с API News API
+
+
 #pip install newsapi-python
 #Перейдите на сайт News API: https://newsapi.org/
 #Нажмите на кнопку "Get API Key" в верхнем правом углу страницы.
