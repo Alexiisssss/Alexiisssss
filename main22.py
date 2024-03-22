@@ -1,3 +1,5 @@
+# Работа с API News API
+
 # Получить и вывести список информационных агентств, публикующих новости на испанском языке;
 
 #pip install newsapi-python
@@ -7,7 +9,7 @@
 from newsapi import NewsApiClient
 
 # Инициализация клиента News API с вашим ключом API
-newsapi = NewsApiClient(api_key='13ccfb80ac5d4749a8f0d4afdc9fd6e0')
+newsapi = NewsApiClient(api_key='YOUR_API_KEY')
 
 # Получение списка информационных агентств на испанском языке
 spanish_sources = newsapi.get_sources(language='es')
