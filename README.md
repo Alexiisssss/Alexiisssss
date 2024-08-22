@@ -23,7 +23,7 @@ My name is Alexey Volkov, and this is my GitHub profile. Here you will find my p
 
 <span style="color: blue;">**About Me**🌟</span>
 
-I have been programming for 3 years. I studied to be a Java developer and have some commercial experience in Java. I constantly improve my skills and knowledge in this programming language with the necessary technology stack for development. I worked in an international company where I wrote VBA macros for Word and Excel documents. I am learning JavaScript + HTML + CSS and have a couple of projects. I have completed many test tasks in this language. Currently, I am learning (working) with 1C-Bitrix. I am also taking courses in artificial intelligence development (Python). I am a versatile and multifaceted person. I easily find compromises and enjoy working in a team. I am persistent and goal-oriented.  
+I studied to be a Java developer and have some commercial experience in Java. I constantly improve my skills and knowledge in this programming language with the necessary technology stack for development. I worked in an international company where I wrote VBA macros for Word and Excel documents. I am learning JavaScript + HTML + CSS and have a couple of projects. I have completed many test tasks in this language. Currently, I am learning (working) with 1C-Bitrix. I am also taking courses in artificial intelligence development (Python). I am a versatile and multifaceted person. I easily find compromises and enjoy working in a team. I am persistent and goal-oriented.  
 
 
 <span style="color: blue;">**Projects**🚀</span>
